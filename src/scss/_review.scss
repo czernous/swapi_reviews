@@ -1,0 +1,116 @@
+.reviews {
+  display: flex;
+  visibility: hidden;
+  transform: scaleY(0);
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  position: absolute;
+  top: 35%;
+  padding: 1rem;
+
+  .review-section {
+    width: 100%;
+    justify-content: center;
+    h1,
+    .review-form {
+      margin: 0 auto;
+    }
+    .review-form {
+      display: flex;
+      width: 80%;
+      flex-direction: column;
+
+      input,
+      textarea,
+      button {
+        max-width: 380px;
+        border-radius: 5px;
+        border: none;
+        padding: 0.5rem;
+        background: lighten(rgb(37, 37, 43), 4%);
+        color: #f3f3f3;
+      }
+      button:hover {
+        color: lighten(rgb(37, 37, 43), 4%);
+        background: #f3f3f3;
+      }
+      input,
+      textarea {
+        margin-bottom: 1rem;
+
+        &::placeholder {
+          color: #d3d3d3d3;
+        }
+        &:focus {
+          background: lighten(rgb(37, 37, 43), 8%);
+        }
+      }
+      a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+        &:hover {
+          color: #f3f3f3;
+        }
+      }
+    }
+  }
+}
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #dbdbd8;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background: rgb(37, 37, 43);
+  padding: 1.5rem 2rem;
+  width: 70%;
+  height: 70%;
+  border-radius: 0.5rem;
+  .user-data {
+    margin: 2rem 2.5rem;
+    h2 {
+      width: 80%;
+    }
+    h2,
+    p {
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-top: 1rem;
+    }
+  }
+}
+.close-button {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  background: #111;
+}
+.close-button:hover {
+  background: #444;
+}
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}

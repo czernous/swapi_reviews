@@ -1,0 +1,65 @@
+@import 'films';
+@import 'review';
+
+$primary-color: rgb(24, 24, 24);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: $primary-color;
+  color: #f3f3f3;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+:hover,
+:focus {
+  transition: all 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  border-bottom: 5px #fff solid;
+}
+.btn {
+  border: none;
+  &:hover {
+    background: lighten(rgb(37, 37, 43), 3%);
+  }
+}
+.btn,
+.movie-info li {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.is-visible {
+  visibility: visible;
+  transform: scaleY(1);
+}
+.is-hidden {
+  visibility: hidden;
+  transform: scaleY(0);
+}

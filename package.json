@@ -1,0 +1,24 @@
+{
+  "name": "swapi_reviews",
+  "version": "1.0.0",
+  "description": "Star Wars movies review app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run clean && parcel public/index.html --out-dir development -p 3000",
+    "build": "parcel build public/*.html --out-dir dist --public-url ./",
+    "clean": "rimraf ./development && rimraf -rf ./.cache"
+  },
+  "author": "Anton Chernous",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/runtime-corejs2": "^7.11.2",
+    "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.11"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
