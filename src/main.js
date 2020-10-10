@@ -1,7 +1,11 @@
 import App from './app';
 
 const app = async () => {
-  document.getElementById('app').appendChild(await App());
+  document.getElementById('app').appendChild(document.createElement('div'));
+  const tempDiv = document.querySelector('div');
+  tempDiv.classList.add('container');
+  tempDiv.innerHTML = `<h1>Loading...</h1>`;
+  tempDiv.parentNode.replaceChild(await App(), tempDiv);
   (function displayMovies() {
     const movieTitle = document.querySelectorAll('.movie-title');
     const movieDescription = document.querySelectorAll('.movie-desc');
